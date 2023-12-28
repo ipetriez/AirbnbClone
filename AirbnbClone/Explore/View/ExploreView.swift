@@ -12,6 +12,7 @@ struct ExploreView: View {
         NavigationStack {
             ScrollView {
                 LazyVStack(spacing: 32) {
+                    SearchBar()
                     ForEach(0 ..< 10) { listing in
                         ListingItemView()
                             .frame(height: 400)
