@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct Listings: View {
+    @Binding var showSearchView: Bool
+    
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 32) {
                 SearchBar()
+                    .onTapGesture {
+                        showSearchView.toggle()
+                    }
                 ForEach(0 ..< 10) { listing in
                     NavigationLink(value: listing) {
                         ListingItemView()
@@ -29,5 +34,5 @@ struct Listings: View {
 }
 
 #Preview {
-    Listings()
+    Listings(showSearchView: .constant(false))
 }
