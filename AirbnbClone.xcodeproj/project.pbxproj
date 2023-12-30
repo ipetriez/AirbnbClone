@@ -23,6 +23,7 @@
 		70C68A032B401DBA00104194 /* DestinationSearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C68A022B401DBA00104194 /* DestinationSearchField.swift */; };
 		70C68A052B40260800104194 /* DateSearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C68A042B40260800104194 /* DateSearchField.swift */; };
 		70C68A072B4026EB00104194 /* GuestsSearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C68A062B4026EB00104194 /* GuestsSearchField.swift */; };
+		70C68A0B2B402D5400104194 /* CollapsibleFieldViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C68A0A2B402D5400104194 /* CollapsibleFieldViewModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		70C68A022B401DBA00104194 /* DestinationSearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSearchField.swift; sourceTree = "<group>"; };
 		70C68A042B40260800104194 /* DateSearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSearchField.swift; sourceTree = "<group>"; };
 		70C68A062B4026EB00104194 /* GuestsSearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsSearchField.swift; sourceTree = "<group>"; };
+		70C68A0A2B402D5400104194 /* CollapsibleFieldViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsibleFieldViewModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,11 +133,8 @@
 		70C689E72B3D705700104194 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				70C689FF2B3F03EB00104194 /* Search Fields */,
-				70C689FC2B3ED7DA00104194 /* Listings */,
-				70C689F52B3DAF1300104194 /* ItemRatingView */,
-				70C689F22B3DA1D500104194 /* Image Slider */,
-				70C689EC2B3D99D100104194 /* Search bar */,
+				70C68A092B402D1A00104194 /* Modifiers */,
+				70C68A082B402D1200104194 /* Views */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -223,6 +222,26 @@
 			path = "Search Fields";
 			sourceTree = "<group>";
 		};
+		70C68A082B402D1200104194 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				70C689FF2B3F03EB00104194 /* Search Fields */,
+				70C689FC2B3ED7DA00104194 /* Listings */,
+				70C689F52B3DAF1300104194 /* ItemRatingView */,
+				70C689F22B3DA1D500104194 /* Image Slider */,
+				70C689EC2B3D99D100104194 /* Search bar */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		70C68A092B402D1A00104194 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				70C68A0A2B402D5400104194 /* CollapsibleFieldViewModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -295,6 +314,7 @@
 			files = (
 				70C689D52B3B2C2400104194 /* ContentView.swift in Sources */,
 				70C689FB2B3ED6F200104194 /* SearchView.swift in Sources */,
+				70C68A0B2B402D5400104194 /* CollapsibleFieldViewModifier.swift in Sources */,
 				70C689E52B3C74E900104194 /* ExploreView.swift in Sources */,
 				70C68A032B401DBA00104194 /* DestinationSearchField.swift in Sources */,
 				70C689EE2B3D9A1A00104194 /* SearchBar.swift in Sources */,

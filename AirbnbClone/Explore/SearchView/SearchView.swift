@@ -64,12 +64,8 @@ struct SearchView: View {
                     CollapsedSearchField(title: "Where to", description: "Add destination ")
                 }
             }
-            .padding()
             .frame(height: selectedSearchLocation == .location ? 120 : 64)
-            .background(.white)
-            .clipShape(RoundedRectangle(cornerRadius: 12))
-            .shadow(radius: 10)
-            .padding()
+            .modifier(CollapsibleFieldViewModifier())
             .onTapGesture {
                 withAnimation(.snappy) {
                     selectedSearchLocation = .location
@@ -85,12 +81,8 @@ struct SearchView: View {
                     CollapsedSearchField(title: "When", description: "Add dates")
                 }
             }
-            .padding()
             .frame(height: selectedSearchLocation == .dates ? 180 : 64)
-            .background(.white)
-            .clipShape(RoundedRectangle(cornerRadius: 12))
-            .shadow(radius: 10)
-            .padding()
+            .modifier(CollapsibleFieldViewModifier())
             .onTapGesture {
                 withAnimation(.snappy) {
                     selectedSearchLocation = .dates
@@ -106,12 +98,8 @@ struct SearchView: View {
                     CollapsedSearchField(title: "Who", description: "Add guests")
                 }
             }
-            .padding()
             .frame(height: selectedSearchLocation == .guests ? 120 : 64)
-            .background(.white)
-            .clipShape(RoundedRectangle(cornerRadius: 12))
-            .shadow(radius: 10)
-            .padding()
+            .modifier(CollapsibleFieldViewModifier())
             .onTapGesture {
                 withAnimation(.snappy) {
                     selectedSearchLocation = .guests
