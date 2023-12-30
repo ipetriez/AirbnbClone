@@ -28,6 +28,7 @@
 		70C68A102B40332B00104194 /* ProfileOptionItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C68A0F2B40332B00104194 /* ProfileOptionItemView.swift */; };
 		70C68A142B40355800104194 /* WishlistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C68A132B40355800104194 /* WishlistsView.swift */; };
 		70C68A162B4036C100104194 /* AirbnbStyleActionButtonViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C68A152B4036C100104194 /* AirbnbStyleActionButtonViewModifier.swift */; };
+		70C68A182B40382100104194 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C68A172B40382100104194 /* MainTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		70C68A0F2B40332B00104194 /* ProfileOptionItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOptionItemView.swift; sourceTree = "<group>"; };
 		70C68A132B40355800104194 /* WishlistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistsView.swift; sourceTree = "<group>"; };
 		70C68A152B4036C100104194 /* AirbnbStyleActionButtonViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirbnbStyleActionButtonViewModifier.swift; sourceTree = "<group>"; };
+		70C68A172B40382100104194 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			children = (
 				70C689D42B3B2C2400104194 /* ContentView.swift */,
 				70C689D22B3B2C2400104194 /* AirbnbCloneApp.swift */,
+				70C68A172B40382100104194 /* MainTabView.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				70C68A162B4036C100104194 /* AirbnbStyleActionButtonViewModifier.swift in Sources */,
 				70C68A052B40260800104194 /* DateSearchField.swift in Sources */,
 				70C689F42B3DA24000104194 /* ImageSliderView.swift in Sources */,
+				70C68A182B40382100104194 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
