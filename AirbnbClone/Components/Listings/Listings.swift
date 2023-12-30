@@ -15,7 +15,9 @@ struct Listings: View {
             LazyVStack(spacing: 32) {
                 SearchBar()
                     .onTapGesture {
-                        showSearchView.toggle()
+                        withAnimation(.snappy) {
+                            showSearchView.toggle()
+                        }
                     }
                 ForEach(0 ..< 10) { listing in
                     NavigationLink(value: listing) {

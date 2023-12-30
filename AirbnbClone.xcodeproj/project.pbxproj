@@ -19,6 +19,10 @@
 		70C689F72B3DAF3100104194 /* ItemRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C689F62B3DAF3100104194 /* ItemRatingView.swift */; };
 		70C689FB2B3ED6F200104194 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C689FA2B3ED6F200104194 /* SearchView.swift */; };
 		70C689FE2B3ED7E700104194 /* Listings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C689FD2B3ED7E700104194 /* Listings.swift */; };
+		70C68A012B3F040500104194 /* CollapsedSearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C68A002B3F040500104194 /* CollapsedSearchField.swift */; };
+		70C68A032B401DBA00104194 /* DestinationSearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C68A022B401DBA00104194 /* DestinationSearchField.swift */; };
+		70C68A052B40260800104194 /* DateSearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C68A042B40260800104194 /* DateSearchField.swift */; };
+		70C68A072B4026EB00104194 /* GuestsSearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C68A062B4026EB00104194 /* GuestsSearchField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,10 @@
 		70C689F62B3DAF3100104194 /* ItemRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRatingView.swift; sourceTree = "<group>"; };
 		70C689FA2B3ED6F200104194 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		70C689FD2B3ED7E700104194 /* Listings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listings.swift; sourceTree = "<group>"; };
+		70C68A002B3F040500104194 /* CollapsedSearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsedSearchField.swift; sourceTree = "<group>"; };
+		70C68A022B401DBA00104194 /* DestinationSearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSearchField.swift; sourceTree = "<group>"; };
+		70C68A042B40260800104194 /* DateSearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSearchField.swift; sourceTree = "<group>"; };
+		70C68A062B4026EB00104194 /* GuestsSearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsSearchField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +131,7 @@
 		70C689E72B3D705700104194 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				70C689FF2B3F03EB00104194 /* Search Fields */,
 				70C689FC2B3ED7DA00104194 /* Listings */,
 				70C689F52B3DAF1300104194 /* ItemRatingView */,
 				70C689F22B3DA1D500104194 /* Image Slider */,
@@ -203,6 +212,17 @@
 			path = Listings;
 			sourceTree = "<group>";
 		};
+		70C689FF2B3F03EB00104194 /* Search Fields */ = {
+			isa = PBXGroup;
+			children = (
+				70C68A002B3F040500104194 /* CollapsedSearchField.swift */,
+				70C68A022B401DBA00104194 /* DestinationSearchField.swift */,
+				70C68A042B40260800104194 /* DateSearchField.swift */,
+				70C68A062B4026EB00104194 /* GuestsSearchField.swift */,
+			);
+			path = "Search Fields";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -276,12 +296,16 @@
 				70C689D52B3B2C2400104194 /* ContentView.swift in Sources */,
 				70C689FB2B3ED6F200104194 /* SearchView.swift in Sources */,
 				70C689E52B3C74E900104194 /* ExploreView.swift in Sources */,
+				70C68A032B401DBA00104194 /* DestinationSearchField.swift in Sources */,
 				70C689EE2B3D9A1A00104194 /* SearchBar.swift in Sources */,
+				70C68A072B4026EB00104194 /* GuestsSearchField.swift in Sources */,
 				70C689EA2B3D708A00104194 /* ListingItemView.swift in Sources */,
 				70C689F12B3DA17800104194 /* ListingDetailView.swift in Sources */,
+				70C68A012B3F040500104194 /* CollapsedSearchField.swift in Sources */,
 				70C689FE2B3ED7E700104194 /* Listings.swift in Sources */,
 				70C689D32B3B2C2400104194 /* AirbnbCloneApp.swift in Sources */,
 				70C689F72B3DAF3100104194 /* ItemRatingView.swift in Sources */,
+				70C68A052B40260800104194 /* DateSearchField.swift in Sources */,
 				70C689F42B3DA24000104194 /* ImageSliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
