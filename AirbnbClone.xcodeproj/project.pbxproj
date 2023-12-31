@@ -29,6 +29,7 @@
 		70C68A142B40355800104194 /* WishlistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C68A132B40355800104194 /* WishlistsView.swift */; };
 		70C68A162B4036C100104194 /* AirbnbStyleActionButtonViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C68A152B4036C100104194 /* AirbnbStyleActionButtonViewModifier.swift */; };
 		70C68A182B40382100104194 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C68A172B40382100104194 /* MainTabView.swift */; };
+		70C68A1D2B403A9200104194 /* ListingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C68A1C2B403A9200104194 /* ListingItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		70C68A132B40355800104194 /* WishlistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistsView.swift; sourceTree = "<group>"; };
 		70C68A152B4036C100104194 /* AirbnbStyleActionButtonViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirbnbStyleActionButtonViewModifier.swift; sourceTree = "<group>"; };
 		70C68A172B40382100104194 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		70C68A1C2B403A9200104194 /* ListingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				70C689F82B3ED6AA00104194 /* SearchView */,
-				70C689E82B3D706C00104194 /* ListingItemView */,
 				70C689EF2B3DA14C00104194 /* ListingDetailView */,
 				70C689F92B3ED6BC00104194 /* ExploreView */,
 			);
@@ -155,17 +156,9 @@
 		70C689E82B3D706C00104194 /* ListingItemView */ = {
 			isa = PBXGroup;
 			children = (
-				70C689EB2B3D709900104194 /* View */,
-			);
-			path = ListingItemView;
-			sourceTree = "<group>";
-		};
-		70C689EB2B3D709900104194 /* View */ = {
-			isa = PBXGroup;
-			children = (
 				70C689E92B3D708A00104194 /* ListingItemView.swift */,
 			);
-			path = View;
+			path = ListingItemView;
 			sourceTree = "<group>";
 		};
 		70C689EC2B3D99D100104194 /* Search bar */ = {
@@ -179,7 +172,9 @@
 		70C689EF2B3DA14C00104194 /* ListingDetailView */ = {
 			isa = PBXGroup;
 			children = (
-				70C689F02B3DA17800104194 /* ListingDetailView.swift */,
+				70C68A1B2B403A8200104194 /* Model */,
+				70C68A1A2B403A7D00104194 /* ViewModel */,
+				70C68A192B403A7700104194 /* View */,
 			);
 			path = ListingDetailView;
 			sourceTree = "<group>";
@@ -219,6 +214,7 @@
 		70C689FC2B3ED7DA00104194 /* Listings */ = {
 			isa = PBXGroup;
 			children = (
+				70C689E82B3D706C00104194 /* ListingItemView */,
 				70C689FD2B3ED7E700104194 /* Listings.swift */,
 			);
 			path = Listings;
@@ -279,6 +275,29 @@
 				70C68A132B40355800104194 /* WishlistsView.swift */,
 			);
 			path = Wishlists;
+			sourceTree = "<group>";
+		};
+		70C68A192B403A7700104194 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70C689F02B3DA17800104194 /* ListingDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70C68A1A2B403A7D00104194 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		70C68A1B2B403A8200104194 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				70C68A1C2B403A9200104194 /* ListingItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,6 +382,7 @@
 				70C689F12B3DA17800104194 /* ListingDetailView.swift in Sources */,
 				70C68A142B40355800104194 /* WishlistsView.swift in Sources */,
 				70C68A012B3F040500104194 /* CollapsedSearchField.swift in Sources */,
+				70C68A1D2B403A9200104194 /* ListingItem.swift in Sources */,
 				70C689FE2B3ED7E700104194 /* Listings.swift in Sources */,
 				70C689D32B3B2C2400104194 /* AirbnbCloneApp.swift in Sources */,
 				70C689F72B3DAF3100104194 /* ItemRatingView.swift in Sources */,
