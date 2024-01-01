@@ -9,13 +9,14 @@ import SwiftUI
 
 struct ExploreView: View {
     @State private var showSearchView = false
+    @StateObject private var exploreVM = ExploreViewModel(service: ExploreService())
     
     var body: some View {
         NavigationStack {
             if showSearchView {
                 SearchView(showSearchView: $showSearchView)
             } else {
-                Listings(showSearchView: $showSearchView)
+                Listings(showSearchView: $showSearchView, listings: $exploreVM.listings)
             }
         }
     }

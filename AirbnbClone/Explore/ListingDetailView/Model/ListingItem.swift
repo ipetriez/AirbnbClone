@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ListingItem: Identifiable, Codable {
+struct ListingItem: Identifiable, Codable, Hashable {
     let id: String
     let ownerUid: String
     let ownerName: String
@@ -20,7 +20,7 @@ struct ListingItem: Identifiable, Codable {
     let latitude: Double
     let longitude: Double
     var imageURLs: [String]
-    let adress: String
+    let address: String
     let city: String
     let state: String
     let title: String
@@ -125,7 +125,7 @@ enum ListingType: Int, Codable, Identifiable, Hashable {
 }
 
 class DeveloperPreview {
-    var listings: [ListingItem] = [
+    static var listings: [ListingItem] = [
         ListingItem(
             id: NSUUID().uuidString,
             ownerUid: NSUUID().uuidString,
@@ -145,7 +145,7 @@ class DeveloperPreview {
                 "listing-4",
                 "listing-5"
             ],
-            adress: "Miami, Florida",
+            address: "Miami, Florida",
             city: "Miami",
             state: "FL",
             title: "Miami Villa",
@@ -172,7 +172,7 @@ class DeveloperPreview {
                 "listing-2",
                 "listing-5"
             ],
-            adress: "Miami, Florida",
+            address: "Miami, Florida",
             city: "Miami",
             state: "FL",
             title: "Miami Villa",
@@ -199,7 +199,7 @@ class DeveloperPreview {
                 "listing-4",
                 "listing-2"
             ],
-            adress: "Miami, Florida",
+            address: "Miami, Florida",
             city: "Miami",
             state: "FL",
             title: "Miami Villa",
@@ -226,7 +226,7 @@ class DeveloperPreview {
                 "listing-1",
                 "listing-3"
             ],
-            adress: "Miami, Florida",
+            address: "Miami, Florida",
             city: "Miami",
             state: "FL",
             title: "Miami Villa",
@@ -253,7 +253,7 @@ class DeveloperPreview {
                 "listing-2",
                 "listing-1"
             ],
-            adress: "Miami, Florida",
+            address: "Miami, Florida",
             city: "Miami",
             state: "FL",
             title: "Miami Villa",
@@ -280,7 +280,7 @@ class DeveloperPreview {
                 "listing-1",
                 "listing-2"
             ],
-            adress: "Miami, Florida",
+            address: "Miami, Florida",
             city: "Miami",
             state: "FL",
             title: "Miami Villa",
@@ -307,7 +307,7 @@ class DeveloperPreview {
                 "listing-4",
                 "listing-5"
             ],
-            adress: "Miami, Florida",
+            address: "Miami, Florida",
             city: "Miami",
             state: "FL",
             title: "Miami Villa",

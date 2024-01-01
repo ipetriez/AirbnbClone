@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Listings: View {
     @Binding var showSearchView: Bool
+    @Binding var listings: [ListingItem]
     
     var body: some View {
         ScrollView {
@@ -19,22 +20,22 @@ struct Listings: View {
                             showSearchView.toggle()
                         }
                     }
-                ForEach(0 ..< 10) { listing in
+                ForEach(listings) { listing in
                     NavigationLink(value: listing) {
-                        ListingItemView()
+                        ListingItemView(listingItem: listing)
                             .frame(height: 400)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                     }
                 }
             }
         }
-        .navigationDestination(for: Int.self) { listing in
-            ListingDetailView()
+        .navigationDestination(for: ListingItem.self) { listing in
+            ListingDetailView(listing: listing)
                 .navigationBarBackButtonHidden()
         }
     }
 }
 
 #Preview {
-    Listings(showSearchView: .constant(false))
+    Listings(showSearchView: .constant(false), listings: .constant([]))
 }
