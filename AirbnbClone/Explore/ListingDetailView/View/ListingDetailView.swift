@@ -10,7 +10,15 @@ import MapKit
 
 struct ListingDetailView: View {
     @Environment(\.dismiss) var dismiss
+    @State private var cameraPosition: MapCameraPosition
     let listing: ListingItem
+    
+    init(listing: ListingItem) {
+        self.listing = listing
+        let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 25.7604, longitude: -80.1959), span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+        self._cameraPosition = State(initialValue: .region(region))
+    }
+    
     var body: some View {
         ScrollView {
             ZStack(alignment: .topLeading) {
@@ -153,7 +161,7 @@ struct ListingDetailView: View {
                 Text("Where you'll be")
                     .font(.headline)
                 
-                Map()
+                Map(position: $cameraPosition)
                     .frame(height: 200)
                     .clipShape(RoundedRectangle(cornerRadius: 12))
             }
