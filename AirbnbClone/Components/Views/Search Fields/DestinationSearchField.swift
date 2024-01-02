@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct DestinationSearchField: View {
-    @Binding var destination: String
+    @Binding var showSearchView: Bool
+    @ObservedObject var exploreVM: ExploreViewModel
     
     var body: some View {
         Text("Where to?")
@@ -18,8 +19,12 @@ struct DestinationSearchField: View {
             Image(systemName: "magnifyingglass")
                 .imageScale(.small)
             
-            TextField("Search destinations", text: $destination)
+            TextField("Search destinations", text: $exploreVM.searchedLocation)
                 .font(.subheadline)
+                .onSubmit {
+                    exploreVM.filterListingsByLocation()
+                    showSearchView.toggle()
+                }
         }
         .frame(height: 44)
         .padding(.horizontal)
@@ -32,5 +37,5 @@ struct DestinationSearchField: View {
 }
 
 #Preview {
-    DestinationSearchField(destination: .constant(""))
+    DestinationSearchField(showSearchView: .constant(true), exploreVM: ExploreViewModel(service: ExploreService()))
 }

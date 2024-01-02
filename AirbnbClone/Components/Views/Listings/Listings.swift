@@ -10,11 +10,12 @@ import SwiftUI
 struct Listings: View {
     @Binding var showSearchView: Bool
     @Binding var listings: [ListingItem]
+    @State var exploreVM: ExploreViewModel
     
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 32) {
-                SearchBar()
+                SearchBar(location: $exploreVM.searchedLocation)
                     .onTapGesture {
                         withAnimation(.snappy) {
                             showSearchView.toggle()
@@ -37,5 +38,5 @@ struct Listings: View {
 }
 
 #Preview {
-    Listings(showSearchView: .constant(false), listings: .constant([]))
+    Listings(showSearchView: .constant(false), listings: .constant([]), exploreVM: ExploreViewModel(service: ExploreService()))
 }

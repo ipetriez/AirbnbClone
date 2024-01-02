@@ -21,11 +21,11 @@ struct SearchView: View {
     
     // MARK: — State properties
     
-    @State private var destination = ""
     @State private var dateFrom = Date()
     @State private var dateTo = Date()
     @State private var numberOfGuests = 0
     @State private var selectedSearchLocation: SearchLocation = .location
+    @StateObject var exploreVM: ExploreViewModel
     
     var body: some View {
         VStack {
@@ -35,6 +35,7 @@ struct SearchView: View {
             HStack {
                 Button(action: {
                     withAnimation(.snappy) {
+                        exploreVM.filterListingsByLocation()
                         showSearchView = false
                     }
                 }, label: {
@@ -44,9 +45,9 @@ struct SearchView: View {
                 })
                 Spacer()
                 
-                if !destination.isEmpty {
+                if !exploreVM.searchedLocation.isEmpty {
                     Button("Clear") {
-                        destination = ""
+                        exploreVM.searchedLocation = ""
                     }
                     .foregroundStyle(.black)
                     .font(.subheadline)
@@ -59,7 +60,7 @@ struct SearchView: View {
             
             VStack(alignment: .leading) {
                 if selectedSearchLocation == .location {
-                    DestinationSearchField(destination: $destination)
+                    DestinationSearchField(showSearchView: $showSearchView, exploreVM: exploreVM)
                 } else {
                     CollapsedSearchField(title: "Where to", description: "Add destination ")
                 }
@@ -112,5 +113,5 @@ struct SearchView: View {
 }
 
 #Preview {
-    SearchView(showSearchView: .constant(false))
+    SearchView(showSearchView: .constant(false), exploreVM: ExploreViewModel(service: ExploreService()))
 }

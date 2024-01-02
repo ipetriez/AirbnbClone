@@ -14,9 +14,9 @@ struct ExploreView: View {
     var body: some View {
         NavigationStack {
             if showSearchView {
-                SearchView(showSearchView: $showSearchView)
+                SearchView(showSearchView: $showSearchView, exploreVM: exploreVM)
             } else {
-                Listings(showSearchView: $showSearchView, listings: $exploreVM.listings)
+                Listings(showSearchView: $showSearchView, listings: $exploreVM.listings, exploreVM: exploreVM)
             }
         }
     }
